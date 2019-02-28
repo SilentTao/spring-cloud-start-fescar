@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <properties resource="generatorConfig.properties"/>
+    <classPathEntry location="${driver.classpath}"/>
+    <context id="Mysql" targetRuntime="MyBatis3">
+        <!--配置mybatis 生成插件　分页查询-->
+        <plugin type="com.dmap.base.plugin.mybatis.MySQLPaginationPlugin"/>
+        <plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
+        <!--<commentGenerator >-->
+        <commentGenerator type="com.dmap.base.plugin.mybatis.MyBatisCommentGenerator">
+            <property name="suppressAllComments" value="false"/>
+            <property name="suppressDate" value="true"/>
+        </commentGenerator>
+
+        <!-- 数据库相关配置 -->
+        <jdbcConnection driverClass="${driver}"
+                        connectionURL="${url}"
+                        userId="${username}" password="${password}"/>
+
+        <javaModelGenerator targetPackage="${package.model}" targetProject="${target.project}">
+            <property name="constructorBased" value="true"/>
+            <property name="enableSubPackages" value="false"/>
+            <property name="immutable" value="false"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+
+        <sqlMapGenerator targetPackage="${package.mapper}" targetProject="${target.mapper.project}">
+            <property name="enableSubPackages" value="false"/>
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="XMLMAPPER" targetPackage="${package.dao}" targetProject="${target.project}">
+            <property name="enableSubPackages" value="false"/>
+        </javaClientGenerator>
+
+        <!--<table schema="" tableName="u_consumer" catalog="" domainObjectName="Consumer"-->
+               <!--enableCountByExample="true" enableDeleteByExample="true"-->
+               <!--enableSelectByExample="true" enableUpdateByExample="true">-->
+            <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!--</table>-->
+        <!--<table schema="" tableName="u_nexus" catalog="" domainObjectName="Nexus"-->
+               <!--enableCountByExample="true" enableDeleteByExample="true"-->
+               <!--enableSelectByExample="true" enableUpdateByExample="true">-->
+            <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!--</table>-->
+        <!--<table schema="" tableName="u_role" catalog="" domainObjectName="Role"-->
+               <!--enableCountByExample="true" enableDeleteByExample="true"-->
+               <!--enableSelectByExample="true" enableUpdateByExample="true">-->
+            <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!--</table>-->
+        <!--<table schema="" tableName="u_role_nexus_resources" catalog="" domainObjectName="RoleNexusResources"-->
+               <!--enableCountByExample="true" enableDeleteByExample="true"-->
+               <!--enableSelectByExample="true" enableUpdateByExample="true">-->
+            <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!--</table>-->
+        <!--<table schema="" tableName="u_scene" catalog="" domainObjectName="Scene"-->
+               <!--enableCountByExample="true" enableDeleteByExample="true"-->
+               <!--enableSelectByExample="true" enableUpdateByExample="true">-->
+            <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!--</table>-->
+        <!--<table schema="" tableName="u_user_nexus" catalog="" domainObjectName="UserNexus"-->
+               <!--enableCountByExample="true" enableDeleteByExample="true"-->
+               <!--enableSelectByExample="true" enableUpdateByExample="true">-->
+            <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!--</table>-->
+        <!--<table schema="" tableName="u_user" catalog="" domainObjectName="User"-->
+               <!--enableCountByExample="true" enableDeleteByExample="true"-->
+               <!--enableSelectByExample="true" enableUpdateByExample="true">-->
+            <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!--</table>-->
+        <!--<table schema="" tableName="u_user_wechat" catalog="" domainObjectName="UserWechat"-->
+               <!--enableCountByExample="true" enableDeleteByExample="true"-->
+               <!--enableSelectByExample="true" enableUpdateByExample="true">-->
+            <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!--</table>-->
+        <!--<table schema="" tableName="u_user_webo" catalog="" domainObjectName="UserWebo"-->
+               <!--enableCountByExample="true" enableDeleteByExample="true"-->
+               <!--enableSelectByExample="true" enableUpdateByExample="true">-->
+            <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!--</table>-->
+        <!--<table schema="" tableName="u_user_qq" catalog="" domainObjectName="UserQQ"-->
+               <!--enableCountByExample="true" enableDeleteByExample="true"-->
+               <!--enableSelectByExample="true" enableUpdateByExample="true">-->
+            <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!--</table>-->
+        <!--<table schema="" tableName="u_login_history" catalog="" domainObjectName="LoginHistory"-->
+               <!--enableCountByExample="true" enableDeleteByExample="true"-->
+               <!--enableSelectByExample="true" enableUpdateByExample="true">-->
+            <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!--</table>-->
+        <!--<table schema="" tableName="visitor" catalog="" domainObjectName="Visitor"-->
+               <!--enableCountByExample="true" enableDeleteByExample="true"-->
+               <!--enableSelectByExample="true" enableUpdateByExample="true">-->
+            <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!--</table>-->
+        <!--<table schema="" tableName="u_user_lenovo" catalog="" domainObjectName="UserLenovo"-->
+               <!--enableCountByExample="true" enableDeleteByExample="true"-->
+               <!--enableSelectByExample="true" enableUpdateByExample="true">-->
+            <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!--</table>-->
+        <!--<table schema="" tableName="user_account_info" catalog="" domainObjectName="UserAccountInfo"-->
+               <!--enableCountByExample="true" enableDeleteByExample="true"-->
+               <!--enableSelectByExample="true" enableUpdateByExample="true">-->
+            <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!--</table>-->
+        <!--<table schema="" tableName="u_user_facebook" catalog="" domainObjectName="UserFaceBook"-->
+               <!--enableCountByExample="true" enableDeleteByExample="true"-->
+               <!--enableSelectByExample="true" enableUpdateByExample="true">-->
+            <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!--</table>-->
+        <table schema="" tableName="user_goal" catalog="" domainObjectName="UserGoal"
+               enableCountByExample="true" enableDeleteByExample="true"
+               enableSelectByExample="true" enableUpdateByExample="true">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+    </context>
+</generatorConfiguration>

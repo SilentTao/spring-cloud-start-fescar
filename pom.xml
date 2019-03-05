@@ -8,12 +8,12 @@
     <modules>
         <module>eureka</module>
         <module>gateway</module>
-        <module>service_one</module>
-        <module>service_tow</module>
+        <module>service-one</module>
+        <module>service-tow</module>
         <module>silent-dependence-manage</module>
     </modules>
     <packaging>pom</packaging>
-    <name>spring-cloud-start-fescar</name>
+    <name>java-study</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
